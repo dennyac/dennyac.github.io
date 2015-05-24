@@ -1,11 +1,12 @@
 ---
-layout:     post
-title:      "Frequently used Git commands"
-subtitle:   "Commands that I find handy when working with Git"
-date:       2015-04-10 12:00:00
-author:     "Denny Abraham Cheriyan"
-header-img: "img/post-bg-01.jpg"
-comments: true
+layout:      post
+title:       "Frequently used Git commands"
+description: "Frequently used Git commands"
+subtitle:    "Commands that I find handy when working with Git"
+date:        2015-04-10 12:00:00
+author:      "Denny Abraham Cheriyan"
+header-img:  "img/post-bg-01.jpg"
+comments:    true
 ---
 
 With my experience using Git so far, which is quite minimal, I have found the following commands to be extremely handy. I’ll keep updating this post from time to time, if I do come across other useful commands. Please note that some of these commands are not recommended as they might re-write history which may not be preferable. Also since I'm relatively new to git, some of these practices may not be advised. I would love to hear feedback regarding this post and about best practices to be followed.
