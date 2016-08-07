@@ -32,12 +32,42 @@
                         </a>
                     </li>
                     {% endif %}
+                    {% if site.youtube_url %}
+                    <li>
+                        <a href="{{ site.youtube_url }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-youtube-play fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
                     {% if site.github_username %}
                     <li>
                         <a href="https://github.com/{{ site.github_username }}">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if site.stackoverflow_url %}
+                    <li>
+                        <a href="{{ site.stackoverflow_url }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if site.linkedin_url %}
+                    <li>
+                        <a href="{{ site.linkedin_url }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
