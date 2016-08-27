@@ -20,13 +20,13 @@ git pull
 {% endhighlight %}
 
 
-To remove the most recent commit - 
+To remove the most recent commit -
 {% highlight bash %}
 git reset --hard HEAD^
 {% endhighlight %}
 
 
-The "Branch-Edit-Commit-Merge" workflow - 
+The "Branch-Edit-Commit-Merge" workflow -
 {% highlight bash %}
 git checkout -b branch-name
 # Make changes
@@ -38,7 +38,8 @@ git merge branch-name
 
 To combine the last n commits into a single commit -
 {% highlight bash %}
-git reset --soft HEAD~2 &&
+# Replace n with the number of commits to combine
+git reset --soft HEAD~n &&
 git commit
 {% endhighlight %}
 
@@ -49,7 +50,7 @@ git push heroku master --force
 {% endhighlight %}
 
 
-Rebasing - 
+Rebasing -
 {% highlight bash %}
 git checkout new-feature
 git rebase master
@@ -58,16 +59,26 @@ git merge new-feature
 {% endhighlight %}
 
 
-To undo the local changes made to a repository- 
+To check out a remote git branch -
 {% highlight bash %}
-git checkout -- .
-# If you want to save the changes for later use
-git stash save --keep-index
-git stash drop
+# Works with git versions >= 1.6.6
+git fetch
+git checkout <branch_name>
 {% endhighlight %}
 
 
-To clone a specific branch from github - 
+If you want to dicard or keep your uncommited changes to a branch aside, and continue to work on it later -
 {% highlight bash %}
-git clone -b <branch> <remote_repo>
+git checkout . # To discard changes
+git stash      # To keep changes aside
+git stash pop  # To bring them back
+{% endhighlight %}
+
+
+Syncing a repository with a fork -
+{% highlight bash %}
+git remote add upstream <repository_url> # To configure a remote to point to the upstream repository
+git fetch upstream # Fetches from the upstream repository and stores it in upstream/master
+git checkout master
+git merge upstream/master
 {% endhighlight %}
