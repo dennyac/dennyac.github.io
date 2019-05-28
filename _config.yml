@@ -20,5 +20,5 @@ paginate: 5
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
 #For sitemap generation	
-gems:
+plugins:
   - jekyll-sitemap
